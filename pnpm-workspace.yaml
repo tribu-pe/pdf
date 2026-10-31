@@ -1,0 +1,12 @@
+# Single-package repository; this file only holds pnpm settings.
+
+# Supply-chain safety: never install a version published less than 7 days ago.
+# A compromised release is usually caught and pulled within days.
+minimumReleaseAge: 10080
+
+# Install scripts of dependencies don't run unless listed here.
+onlyBuiltDependencies: []
+
+# Our own package, released from tribu-pe/tribu: no need to wait.
+minimumReleaseAgeExclude:
+  - tribu

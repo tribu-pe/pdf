@@ -1,0 +1,11 @@
+# Normalize line endings: a CRLF in a golden XML or a signed document changes its bytes,
+# and with them the digest and the signature.
+* text=auto eol=lf
+*.xml text eol=lf
+
+*.pfx binary
+*.p12 binary
+*.zip binary
+*.ttf binary
+*.pdf binary
+*.png binary

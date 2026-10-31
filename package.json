@@ -1,0 +1,60 @@
+{
+  "name": "@tribu-pe/pdf",
+  "version": "0.1.0-experimental.0",
+  "description": "Printed Representation (PDF) of SUNAT electronic documents issued with Tribu: A4 and ticket templates, built on pdfmake.",
+  "keywords": [
+    "sunat",
+    "peru",
+    "pdf",
+    "facturacion-electronica",
+    "representacion-impresa",
+    "tribu"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tribu-pe/pdf.git"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "engines": {
+    "node": ">=22.12.0"
+  },
+  "packageManager": "pnpm@12.10.1",
+  "exports": {
+    ".": "./dist/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "fonts"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "tag": "experimental"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "prepublishOnly": "pnpm check && pnpm build",
+    "typecheck": "tsc --noEmit",
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "test": "vitest run",
+    "examples": "pnpm build && node scripts/examples.ts",
+    "check": "pnpm typecheck && pnpm lint && pnpm test"
+  },
+  "dependencies": {
+    "@types/pdfmake": "^0.3.3",
+    "pdfmake": "^0.3.12"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.15",
+    "@types/node": "^22.20.5",
+    "@types/node-forge": "^1.3.14",
+    "node-forge": "^1.4.0",
+    "tribu": "0.1.0-experimental.1",
+    "tsdown": "^0.23.1",
+    "typescript": "~6.0.3",
+    "vitest": "^5.0.5"
+  }
+}
