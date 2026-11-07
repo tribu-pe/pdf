@@ -1,6 +1,6 @@
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tribu-pe/brand/main/logo/tribu-horizontal-white.svg">
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/tribu-pe/brand/main/logo/variants/tribu-horizontal-white.svg">
     <img src="https://raw.githubusercontent.com/tribu-pe/brand/main/logo/variants/tribu-horizontal-color-1200.png" alt="Tribu" width="320">
   </picture>
 </p>
